@@ -1,0 +1,194 @@
+version: 1
+
+dn: dc=luochunhui,dc=com
+objectClass: organization
+objectClass: dcObject
+objectClass: top
+dc: luochunhui
+o: KaiDianBao
+
+dn: cn=admin,dc=luochunhui,dc=com
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword: {SSHA}+tfo2Z54LFimPa24g1v0IAH092maufMc
+description: LDAP administrator
+
+dn: ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: inner
+
+dn: ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: people
+
+dn: cn=django-agent,dc=luochunhui,dc=com
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: django-agent
+userPassword: {SHA512}eDzbznn6sJxt6gi/KQGcwp+6/RBWbM3AtaWJEcTCaVz30wRPcV0dDA
+ TVT2Vf029LE9Hx3CT+nU3Lwl0ZoniYsg==
+description: LDAP administrator
+
+dn: ou=organization,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: organization
+
+dn: ou=jpos,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: jpos
+
+dn: ou=jenkins,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: jenkins
+
+dn: cn=users,ou=jpos,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: users
+uniqueMember: cn=18621509910,ou=people,dc=luochunhui,dc=com
+
+dn: cn=sa,ou=jenkins,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: sa
+member: cn=apm@luochunhui.com,ou=people,dc=luochunhui,dc=com
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=admin,ou=jenkins,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: admin
+member: cn=apm@luochunhui.com,ou=people,dc=luochunhui,dc=com
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=tester,ou=jenkins,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: tester
+member: cn=apm@luochunhui.com,ou=people,dc=luochunhui,dc=com
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=developer,ou=jenkins,ou=inner,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: developer
+member: cn=apm@luochunhui.com,ou=people,dc=luochunhui,dc=com
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=staff,ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: staff
+member: cn=apm@luochunhui.com,ou=people,dc=luochunhui,dc=com
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+member: cn=mjc@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=active,ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: active
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=group2,ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: posixGroup
+cn: group2
+gidNumber: 1
+memberUid: 5001
+
+dn: ou=django,ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: django
+
+dn: cn=disabled,ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: disabled
+member: cn=anonymous,ou=people,dc=luochunhui,dc=com
+
+dn: cn=superuser,ou=django,ou=groups,dc=luochunhui,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: superuser
+member: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+
+dn: cn=apm@luochunhui.com,ou=people,dc=luochunhui,dc=com
+objectClass: simpleSecurityObject
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: apm@luochunhui.com
+sn: Huang Xiaobo
+userPassword: {MD5}fVVZumIxNWObBV9N6WGHzQ==
+carLicense: 221234
+description:: 5LiA5Liq5aW95Lq6
+displayName:: 6buE56yR5rOi
+mail: apm@luochunhui.com
+mobile: 18877187712
+
+dn: cn=wo@luochunhui.com,ou=people,dc=luochunhui,dc=com
+objectClass: simpleSecurityObject
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: wo@luochunhui.com
+sn: Chunhui
+userPassword: {MD5}XZkE1s4aZVh9QtpYJjVT1g==
+carLicense: 202wWudn3WL3d8T2s4t8s55AWHcw0yT0B6eZgaRtcna9EA2ht
+description: Hello
+displayName:: 572X5pil5pmW
+mail: wo@luochunhui.com
+mobile: 18621509910
+
+dn: cn=mjc@luochunhui.com,ou=people,dc=luochunhui,dc=com
+objectClass: simpleSecurityObject
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: mjc@luochunhui.com
+sn: MaJiancheng
+userPassword: {MD5}fVVZumIxNWObBV9N6WGHzQ==
+displayName:: 6ams5bu65oiQMg==
+mail: mjc@luochunhui.com
+mobile: 18621509999
+
+dn: cn=wxl@luochunhui.com,ou=people,dc=luochunhui,dc=com
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: wxl@luochunhui.com
+sn: wxl@luochunhui.com
+userPassword: {SSHA}XDhIt23UfYuH9sIaK8snbSD9ZKEx7GtO
+
+dn: ou=tee,ou=organization,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: tee
+
+dn: cn=admin,ou=organization,dc=luochunhui,dc=com
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword: {SSHA}+tfo2Z54LFimPa24g1v0IAH092maufMc
+description: LDAP administrator
+
+dn: ou=settlement,ou=organization,dc=luochunhui,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: settlement
+
