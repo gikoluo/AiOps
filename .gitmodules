@@ -1,3 +1,6 @@
 [submodule "jenkins"]
 	path = jenkins
 	url = git@github.com:gikoluo/devops-jenkins.git
+[submodule "oauth2"]
+	path = oauth2
+	url = git@github.com:gikoluo/django_oauth2.git
