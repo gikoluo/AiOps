@@ -7,3 +7,6 @@
 [submodule "openldap"]
 	path = openldap
 	url = git@github.com:gikoluo/openldap.git
+[submodule "playbooks"]
+	path = playbooks
+	url = git@github.com:gikoluo/playbooks2.git
