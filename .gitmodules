@@ -10,3 +10,6 @@
 [submodule "playbooks"]
 	path = playbooks
 	url = git@192.168.30.12:sa/playbooks.git
+[submodule "configs"]
+	path = configs
+	url = git@192.168.30.12:scm/configs.git
